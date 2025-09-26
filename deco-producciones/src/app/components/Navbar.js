@@ -12,7 +12,7 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <img
               className="h-10 w-auto"
-              src="/assets/img/Deco-logo.png"
+              src="/navbar/Deco-logo.png"
               alt="Deco Producciones Logo"
             />
           </div>
@@ -51,45 +51,52 @@ export default function Navbar() {
           </div>
 
           {/* Enlaces de navegación */}
-          <div className={`flex-1 justify-end md:flex ${isOpen ? "block" : "hidden"} md:block`}>
-            <ul className="navbar navbar-nav flex flex-col md:flex-row md:space-x-2 items-center">
-              <li>
-                <a href="#inicio" className="nav-link text-[#C00101] py-2 block">
-                  Inicio
-                </a>
-              </li>
-              <li>
-                <a href="#quienes-somos" className="nav-link text-[#C00101] py-2 block">
-                  Quienes somos
-                </a>
-              </li>
-              <li>
-                <a href="#servicios" className="nav-link text-[#C00101] py-2 block">
-                  Servicios
-                </a>
-              </li>
-              <li>
-                <a href="#galeria" className="nav-link text-[#C00101] py-2 block">
-                  Galería y marcas
-                </a>
-              </li>
-              <li>
-                <a href="#contacto" className="nav-link text-[#C00101] py-2 block">
-                  Contacto
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://wa.me/95962760"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="bg-[#C00101] text-white px-4 py-2 rounded hover:bg-[#dc3545] mt-2 md:mt-0"
-                >
-                  Reserva tu stand
-                </a>
-              </li>
-            </ul>
-          </div>
+          <div
+          className={`${
+            isOpen
+              ? "absolute top-16 left-0 w-full bg-white shadow-md"
+              : "hidden"
+          } md:static md:flex md:justify-end`}
+        >
+          <ul className="navbar navbar-nav flex flex-col md:flex-row md:space-x-2 items-center p-4 md:p-0">
+            <li>
+              <a href="#inicio" className="nav-link text-[#C00101] py-2 block">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="#quienes-somos" className="nav-link text-[#C00101] py-2 block">
+                Quienes somos
+              </a>
+            </li>
+            <li>
+              <a href="#servicios" className="nav-link text-[#C00101] py-2 block">
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a href="#galeria" className="nav-link text-[#C00101] py-2 block">
+                Galería y marcas
+              </a>
+            </li>
+            <li>
+              <a href="#contacto" className="nav-link text-[#C00101] py-2 block">
+                Contacto
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://wa.me/95962760"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#C00101] text-white px-4 py-2 rounded hover:bg-[#dc3545] mt-2 md:mt-0"
+              >
+                Reserva tu stand
+              </a>
+            </li>
+          </ul>
+        </div>
+
         </div>
       </div>
     </nav>
