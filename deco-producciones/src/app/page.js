@@ -1,11 +1,14 @@
 import Navbar from "./components/Navbar";
-import HomeGallery from "./components/HomeGallery";
+import HomeGallery from "./sections/HomeGallery";
+import About from "./sections/About";
 
 export default function Home() {
   return (
     <div className="bg-[#f8f5f5] min-h-screen">
       <Navbar />
       <HomeGallery />
+      <About />
+
     </div>
   );
 }
