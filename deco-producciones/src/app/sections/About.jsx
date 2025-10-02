@@ -9,7 +9,7 @@ const QuienesSomos = () => {
           {/* Texto a la izquierda */}
           <div className="text-center md:text-left md:w-2/3 md:order-1 mb-16 max-w-3xl">
 
-            <h2 className="text-3xl text-[#C00101] mb-4">
+            <h2 className="text-3xl text-[#C00101] mb-4 mt-6">
               Transforma tus eventos con nuestros stands
             </h2>
             <p className="text-black text-base md:text-base leading-relaxed mb-4">
