@@ -41,3 +41,30 @@ html {
   scroll-behavior: smooth;
 }
 
+.menu-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-line .description {
+  flex: 1;
+  padding-right: 0.25rem;
+  margin-bottom: 0.60rem;
+  
+}
+
+.menu-line .price {
+  flex-shrink: 0; /* evita que se comprima */
+  margin-left: 0.25rem;
+}
+
+ul {
+  max-width: 1000px; /* ancho para la “carta” */
+
+ 
+}
+
+
+
+

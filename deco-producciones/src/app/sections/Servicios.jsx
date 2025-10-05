@@ -28,14 +28,12 @@ const Servicios = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
           {Object.entries(serviciosData).map(([categoria], idx) => (
             <div key={idx} className="flex flex-col">
-              {/* Tarjeta de categoría con imagen */}
               <button
                 onClick={() => toggleCategoria(categoria)}
                 className={`relative overflow-hidden rounded-lg shadow-md transition-all duration-300 hover:shadow-xl cursor-pointer ${
                   categoriaAbierta === categoria ? "ring-4 ring-[#C00101] shadow-2xl" : ""
                 }`}
               >
-                {/* Contenedor con aspecto */}
                 <div className="aspect-[4/3] relative group">
                   <Image
                     src={imagenesCategoria[categoria]}
@@ -47,17 +45,13 @@ const Servicios = () => {
                            33vw"
                     priority={idx === 0}
                   />
-                  {/* Overlay con degradado */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent transition-opacity duration-300 group-hover:opacity-90" />
-                  {/* Nombre de la categoría */}
                   <div className="absolute bottom-0 left-0 right-0 p-4">
                     <h3 className="text-white text-xl md:text-2xl text-center font-semibold">
                       {categoria}
                     </h3>
                   </div>
                 </div>
-
-
               </button>
             </div>
           ))}
@@ -71,20 +65,32 @@ const Servicios = () => {
                 {categoriaAbierta}
               </h3>
 
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <ul className="space-y-3">
                 {serviciosData[categoriaAbierta].map((servicio, index) => (
-                  <li
-                    key={index}
-                    className="p-4 hover:bg-gray-50 rounded-lg transition-colors border border-gray-100"
-                  >
-                    <div className="flex flex-col gap-2">
-                      <h4 className="text-gray-900 font-semibold text-base">
-                        {servicio.nombre}
-                      </h4>
-                      <p className="text-gray-600 text-sm leading-relaxed">
-                        {servicio.detalle}
-                      </p>
-                    </div>
+                  <li key={index} className="py-2 border-b last:border-0">
+                    {/* Nombre del producto */}
+                    <span className="block text-gray-900 font-semibold mb-1">
+                      {servicio.nombre}
+                    </span>
+
+                    {/* Variantes o detalle único */}
+                    {servicio.variantes ? (
+                      servicio.variantes.map((v, i) => (
+                        <div key={i} className="menu-line flex items-center text-gray-700 text-sm">
+                          <span className="description flex-1 relative pr-2">
+                            {v.descripcion}
+                          </span>
+                          <span className="price flex-shrink-0 ml-2">{v.precio}</span>
+                        </div>
+                      ))
+                    ) : (
+                      <div className="menu-line flex items-center text-gray-700 text-sm">
+                        <span className="description flex-1 relative pr-2">
+                          {servicio.detalle}
+                        </span>
+                        <span className="price flex-shrink-0 ml-2">{servicio.precio || ""}</span>
+                      </div>
+                    )}
                   </li>
                 ))}
               </ul>
