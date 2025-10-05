@@ -30,7 +30,7 @@ const QuienesSomos = () => {
           </div>
 
           {/* Imagen a la derecha */}
-          <div className="flex-shrink-0 mb-8 md:mb-0 md:order-2 w-full max-w-[320px] h-100 relative mx-auto md:w-[320px]">
+          <div className="flex-shrink-0 mb-8 md:mb-0 md:order-2 w-full max-w-[320px] h-100 relative mx-auto md:w-[320px] mt-6">
 
             <Image
               src="/about/about_picture.jpg"
