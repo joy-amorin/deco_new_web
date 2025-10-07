@@ -74,9 +74,12 @@ export default function Navbar() {
                 Servicios
               </a>
             </li>
+            <a href="#galeria" className="nav-link text-[#C00101] py-2 block">
+                Galeria
+              </a>
             <li>
-              <a href="#galeria" className="nav-link text-[#C00101] py-2 block">
-                Galería y marcas
+              <a href="#marcas" className="nav-link text-[#C00101] py-2 block">
+                Marcas
               </a>
             </li>
             <li>

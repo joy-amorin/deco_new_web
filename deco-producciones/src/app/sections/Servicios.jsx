@@ -80,7 +80,7 @@ const Servicios = () => {
 
   return (
     <section id="servicios" className="py-16 px-6">
-      <h2 className="text-3xl text-[#C00101] mb-12 text-center">
+      <h2 className="text-3xl text-[#C00101] mb-12 mt-6 text-center">
         Nuestros Servicios
       </h2>
 

@@ -2,6 +2,8 @@ import Navbar from "./components/Navbar";
 import HomeGallery from "./sections/HomeGallery";
 import About from "./sections/About";
 import Servicios from "./sections/Servicios";
+import MarcasGaleria from "./sections/Marcas";
+import Gallery from "./sections/Gallery";
 
 export default function Home() {
   return (
@@ -10,6 +12,9 @@ export default function Home() {
       <HomeGallery />
       <About />
       <Servicios />
+       < Gallery />
+      <MarcasGaleria />
+     
 
     </div>
   );
