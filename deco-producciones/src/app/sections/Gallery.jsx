@@ -31,7 +31,7 @@ export default function Gallery() {
           >
             <img
               src={img.src}
-              alt={img.alt} // solo accesibilidad, no se muestra
+              alt={img.alt} 
               className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105"
             />
           </div>
@@ -55,7 +55,7 @@ export default function Gallery() {
           {/* Imagen */}
           <img
             src={images[selectedImgIndex].src}
-            alt={images[selectedImgIndex].alt} // accesibilidad
+            alt={images[selectedImgIndex].alt}
             className="max-h-[90%] max-w-[90%] rounded-2xl shadow-2xl"
           />
 
