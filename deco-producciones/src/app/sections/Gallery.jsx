@@ -1,29 +1,41 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { images } from "@/data/gallerySectionData";
 
 export default function Gallery() {
   const [selectedImgIndex, setSelectedImgIndex] = useState(null);
 
-  const handlePrev = (e) => {
-    e.stopPropagation();
+  const handlePrev = () => {
     setSelectedImgIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1));
   };
 
-  const handleNext = (e) => {
-    e.stopPropagation();
+  const handleNext = () => {
     setSelectedImgIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
   };
 
+  // Escuchar el teclado solo cuando el lightbox está activo
+  useEffect(() => {
+    if (selectedImgIndex === null) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === "ArrowLeft") handlePrev();
+      if (e.key === "ArrowRight") handleNext();
+      if (e.key === "Escape") setSelectedImgIndex(null);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedImgIndex]);
+
   return (
     <section id="galeria" className="px-6 py-12">
-      <h2 className="text-3xl text-[#C00101] mt-10 mb-10 text-center">
+      <h2 className="text-3xl text-[#C00101] mb-10 mt-10 text-center">
         Galería
       </h2>
 
-      {/* Grid compacto: primeras 8 imágenes */}
+      {/* Grid compacto: primeras 4 imágenes */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-6xl mx-auto">
-        {images.slice(0, 8).map((img, index) => (
+        {images.slice(0, 4).map((img, index) => (
           <div
             key={index}
             className="relative overflow-hidden rounded-xl shadow-md cursor-pointer"
@@ -31,7 +43,7 @@ export default function Gallery() {
           >
             <img
               src={img.src}
-              alt={img.alt} 
+              alt={img.alt} // accesibilidad
               className="w-full h-64 object-cover transform transition-transform duration-500 hover:scale-105"
             />
           </div>
@@ -46,7 +58,10 @@ export default function Gallery() {
         >
           {/* Flecha izquierda */}
           <button
-            onClick={handlePrev}
+            onClick={(e) => {
+              e.stopPropagation();
+              handlePrev();
+            }}
             className="absolute left-5 text-white text-3xl font-bold hover:text-gray-400 transition-colors"
           >
             ‹
@@ -61,7 +76,10 @@ export default function Gallery() {
 
           {/* Flecha derecha */}
           <button
-            onClick={handleNext}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleNext();
+            }}
             className="absolute right-5 text-white text-3xl font-bold hover:text-gray-400 transition-colors"
           >
             ›

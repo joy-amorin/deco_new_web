@@ -17,7 +17,7 @@ export default function MarcasGaleria() {
       <div className="text-center mb-12">
         <h2
           id="marcas-titulo"
-          className="text-4xl text-[#C00101] mb-3"
+          className="text-3xl text-[#C00101] mt-6 mb-3"
         >
           Nos han elegido
         </h2>

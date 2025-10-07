@@ -9,13 +9,13 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex-shrink-0">
-            <img
-              className="h-10 w-auto"
-              src="/navbar/Deco-logo.png"
-              alt="Deco Producciones Logo"
-            />
-          </div>
+          <div className="flex-shrink-0 cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <img
+            className="h-10 w-auto"
+            src="/navbar/Deco-logo.png"
+            alt="Deco Producciones Logo"
+          />
+        </div>
 
           {/* Botón hamburguesa para móviles */}
           <div className="flex md:hidden">
