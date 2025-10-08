@@ -86,7 +86,7 @@ export const serviciosData = {
     {
       nombre: "Nuggets",
       variantes: [
-        { descripcion: "Cajita (5 unidades)", precio: "$85" }
+        { descripcion: "Cajita 5 unidades", precio: "$85" }
       ]
     },
     {
