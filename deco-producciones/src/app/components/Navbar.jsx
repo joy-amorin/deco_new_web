@@ -60,30 +60,42 @@ export default function Navbar() {
         >
           <ul className="navbar navbar-nav flex flex-col md:flex-row md:space-x-2 items-center p-4 md:p-0">
             <li>
-              <a href="#inicio" className="nav-link text-[#C00101] py-2 block">
+              <a href="#inicio" className="nav-link text-[#C00101] py-2 block"
+              onClick={() => setIsOpen(false)}
+              >
                 Inicio
               </a>
             </li>
             <li>
-              <a href="#quienes-somos" className="nav-link text-[#C00101] py-2 block">
+              <a href="#quienes-somos" className="nav-link text-[#C00101] py-2 block"
+              onClick={() => setIsOpen(false)}
+              >
                 Quienes somos
               </a>
             </li>
             <li>
-              <a href="#servicios" className="nav-link text-[#C00101] py-2 block">
+              <a href="#servicios" className="nav-link text-[#C00101] py-2 block"
+              onClick={() => setIsOpen(false)}
+              >
                 Servicios
               </a>
             </li>
-            <a href="#galeria" className="nav-link text-[#C00101] py-2 block">
+            <a href="#galeria" className="nav-link text-[#C00101] py-2 block"
+            onClick={() => setIsOpen(false)}
+            >
                 Galeria
               </a>
             <li>
-              <a href="#marcas" className="nav-link text-[#C00101] py-2 block">
+              <a href="#marcas" className="nav-link text-[#C00101] py-2 block"
+              onClick={() => setIsOpen(false)}
+              >
                 Marcas
               </a>
             </li>
             <li>
-              <a href="#contacto" className="nav-link text-[#C00101] py-2 block">
+              <a href="#contacto" className="nav-link text-[#C00101] py-2 block"
+              onClick={() => setIsOpen(false)}
+              >
                 Contacto
               </a>
             </li>
