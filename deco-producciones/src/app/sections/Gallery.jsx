@@ -51,41 +51,43 @@ export default function Gallery() {
       </div>
 
       {/* Lightbox */}
-      {selectedImgIndex !== null && (
-        <div
-          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
-          onClick={() => setSelectedImgIndex(null)}
-        >
-          {/* Flecha izquierda */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handlePrev();
-            }}
-            className="absolute left-5 text-white text-3xl font-bold hover:text-gray-400 transition-colors"
-          >
-            ‹
-          </button>
+{selectedImgIndex !== null && (
+  <div
+    className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+    onClick={() => setSelectedImgIndex(null)}
+  >
+    <div className="relative inline-flex items-center justify-center">
+      {/* Imagen */}
+      <img
+        src={images[selectedImgIndex].src}
+        alt={images[selectedImgIndex].alt}
+        className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl select-none"
+      />
 
-          {/* Imagen */}
-          <img
-            src={images[selectedImgIndex].src}
-            alt={images[selectedImgIndex].alt}
-            className="max-h-[90%] max-w-[90%] rounded-2xl shadow-2xl"
-          />
+      {/* Flecha izquierda */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          handlePrev();
+        }}
+        className="absolute -left-6 md:-left-10 text-white text-4xl font-bold hover:text-gray-400 transition-colors"
+      >
+        ‹
+      </button>
 
-          {/* Flecha derecha */}
-          <button
-            onClick={(e) => {
-              e.stopPropagation();
-              handleNext();
-            }}
-            className="absolute right-5 text-white text-3xl font-bold hover:text-gray-400 transition-colors"
-          >
-            ›
-          </button>
-        </div>
-      )}
+      {/* Flecha derecha */}
+      <button
+        onClick={(e) => {
+          e.stopPropagation();
+          handleNext();
+        }}
+        className="absolute -right-6 md:-right-10 text-white text-4xl font-bold hover:text-gray-400 transition-colors"
+      >
+        ›
+      </button>
+    </div>
+  </div>
+)}
     </section>
   );
 }
