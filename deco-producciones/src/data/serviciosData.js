@@ -70,6 +70,21 @@ export const serviciosData = {
         { descripcion: "Completa (cheddar, jamón, morrón, cebolla y aderezos)", precio: "$140" }
       ]
     },
+
+    {
+      nombre: "Chorizos",
+      variantes: [
+        { descripcion: "", precio: "$170" },
+      ]
+    },
+
+    {
+      nombre: "Empanadas",
+      variantes: [
+        { descripcion:"", precio: "$90"},
+      ]
+    },
+
     {
       nombre: "Panchos",
       variantes: [
