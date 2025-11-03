@@ -65,26 +65,26 @@ export default function Gallery() {
       />
 
       {/* Flecha izquierda */}
+
       <button
-        onClick={(e) => {
-          e.stopPropagation();
-          handlePrev();
-        }}
-        className="absolute -left-6 md:-left-10 text-white text-4xl font-bold hover:text-gray-400 transition-colors"
+        onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+        className="absolute top-1/2 left-4 md:-left-10 transform -translate-y-1/2 text-white font-bold hover:text-gray-400 transition-colors"
       >
-        ‹
+        <div className="bg-black/50 hover:bg-black/70 rounded-full p-2 md:p-3 flex items-center justify-center">
+          <span className="text-2xl md:text-4xl select-none">‹</span>
+        </div>
       </button>
 
       {/* Flecha derecha */}
       <button
-        onClick={(e) => {
-          e.stopPropagation();
-          handleNext();
-        }}
-        className="absolute -right-6 md:-right-10 text-white text-4xl font-bold hover:text-gray-400 transition-colors"
+        onClick={(e) => { e.stopPropagation(); handleNext(); }}
+        className="absolute top-1/2 right-4 md:-right-10 transform -translate-y-1/2 text-white font-bold hover:text-gray-400 transition-colors"
       >
-        ›
+        <div className="bg-black/50 hover:bg-black/70 rounded-full p-2 md:p-3 flex items-center justify-center">
+          <span className="text-2xl md:text-4xl select-none">›</span>
+        </div>
       </button>
+
     </div>
   </div>
 )}
