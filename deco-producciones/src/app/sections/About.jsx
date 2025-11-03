@@ -3,11 +3,12 @@ import Image from "next/image";
 const QuienesSomos = () => {
   return (
     <section id="quienes-somos" className="py-16">
-      <div className="w-full mx-auto px-2 md:px-4 lg:px-8">
+      <div className="max-w-6xl mx-auto px-2 md:px-4 lg:px-8">
         <div className="flex flex-col md:flex-row items-start justify-start md:gap-8">
           
           {/* Texto a la izquierda */}
-          <div className="text-center md:text-left md:w-2/3 md:order-1 mb-16 max-w-3xl">
+          <div className="text-center md:text-left md:w-2/3 md:order-1 mb-16 max-w-3xl md:-ml-4">
+
 
             <h2 className="text-3xl text-[#C00101] mb-4 mt-6">
               Transforma tus eventos con nuestros stands
