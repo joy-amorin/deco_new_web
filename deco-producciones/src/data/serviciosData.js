@@ -74,14 +74,14 @@ export const serviciosData = {
     {
       nombre: "Chorizos",
       variantes: [
-        { descripcion: "", precio: "$170" },
+        { descripcion: "Incluye lecchuga, tomate y aderezos", precio: "$190" },
       ]
     },
 
     {
       nombre: "Empanadas",
       variantes: [
-        { descripcion:"", precio: "$90"},
+        { descripcion:"Tres gustos a elección", precio: "$90"},
       ]
     },
 
