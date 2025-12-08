@@ -9,7 +9,7 @@ export default function HomeGallery() {
 
   return (
     <section id="inicio" className="py-10">
-      <div className="w-full mx-auto px-2 md:px-4 lg:px-8">
+    <div className="max-w-6xl mx-auto px-2 md:px-4 lg:px-8">
 
         {/* Título */}
         <h1 className="text-4xl text-[#C00101] mb-8 text-left mt-12">
