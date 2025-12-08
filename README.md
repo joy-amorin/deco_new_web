@@ -39,6 +39,6 @@ El sitio presenta una estructura simple y moderna con secciones informativas sob
    ```bash
    http://localhost:3000
  ## 🚀 Despliegue
- Elsitio está desplegado en vercel: https://vercel.com/
+ Elsitio está desplegado en https://www.decoproducciones.com/
 
 Desarrollado por Joy Amorin
