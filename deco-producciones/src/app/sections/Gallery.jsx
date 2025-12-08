@@ -51,43 +51,74 @@ export default function Gallery() {
       </div>
 
       {/* Lightbox */}
-{selectedImgIndex !== null && (
-  <div
-    className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
-    onClick={() => setSelectedImgIndex(null)}
-  >
-    <div className="relative inline-flex items-center justify-center">
-      {/* Imagen */}
-      <img
-        src={images[selectedImgIndex].src}
-        alt={images[selectedImgIndex].alt}
-        className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl select-none"
-      />
+      {selectedImgIndex !== null && (
+        <div
+          className="fixed inset-0 bg-black/90 flex items-center justify-center z-50"
+          onClick={() => setSelectedImgIndex(null)}
+        >
+          {/* Contenedor padre para desktop y mobile */}
+          <div className="relative flex items-center justify-center">
 
-      {/* Flecha izquierda */}
+            {/* Desktop: contenedor gris de tamaño fijo*/}
+            <div className="hidden md:flex items-center justify-center bg-gray-800 rounded-2xl w-[900px] h-[600px] relative">
+              {/* Flecha izquierda */}
+              <button
+                onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 px-3 py-4 rounded-full bg-black/80 hover:bg-black/70 transition-colors"
+              >
+                 <span className="text-5xl select-none -translate-x-1 inline-block">‹</span>
+                 </button>
 
-      <button
-        onClick={(e) => { e.stopPropagation(); handlePrev(); }}
-        className="absolute top-1/2 left-4 md:-left-10 transform -translate-y-1/2 text-white font-bold hover:text-gray-400 transition-colors"
-      >
-        <div className="bg-black/50 hover:bg-black/70 rounded-full p-2 md:p-3 flex items-center justify-center">
-          <span className="text-2xl md:text-4xl select-none">‹</span>
+              {/* Imagen centrada en el contenedor */}
+              <img
+                src={images[selectedImgIndex].src}
+                alt={images[selectedImgIndex].alt}
+                className="max-h-full max-w-full select-none"
+              />
+
+              {/* Flecha derecha */}
+              <button
+                onClick={(e) => { e.stopPropagation(); handleNext(); }}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 text-white hover:text-gray-300 px-3 py-4 rounded-full bg-black/80 hover:bg-black/70 transition-colors"
+              >
+                <span className="text-5xl select-none translate-x-1 inline-block">›</span>
+               
+              </button>
+            </div> 
+
+            {/* Mobile: imagen con flechas sobre la foto */}
+            <div className="md:hidden relative inline-flex items-center justify-center">
+              {/* Imagen */}
+              <img
+                src={images[selectedImgIndex].src}
+                alt={images[selectedImgIndex].alt}
+                className="max-h-[90vh] max-w-[90vw] rounded-2xl shadow-2xl select-none"
+              />
+
+              {/* Flecha izquierda */}
+              <button
+                onClick={(e) => { e.stopPropagation(); handlePrev(); }}
+                className="absolute top-1/2 left-4 transform -translate-y-1/2 text-white font-bold hover:text-gray-400 transition-colors"
+              >
+                <div className="bg-black/50 hover:bg-black/70 rounded-full p-2 md:p-3 flex items-center justify-center">
+                  <span className="text-3xl md:text-4xl select-none">‹</span>
+                </div>
+              </button>
+
+              {/* Flecha derecha */}
+              <button
+                onClick={(e) => { e.stopPropagation(); handleNext(); }}
+                className="absolute top-1/2 right-4 transform -translate-y-1/2 text-white font-bold hover:text-gray-400 transition-colors"
+              >
+                <div className="bg-black/50 hover:bg-black/70 rounded-full p-2 md:p-3 flex items-center justify-center">
+                  <span className="text-3xl md:text-4xl select-none">›</span>
+                </div>
+              </button>
+            </div>
+
+          </div>
         </div>
-      </button>
-
-      {/* Flecha derecha */}
-      <button
-        onClick={(e) => { e.stopPropagation(); handleNext(); }}
-        className="absolute top-1/2 right-4 md:-right-10 transform -translate-y-1/2 text-white font-bold hover:text-gray-400 transition-colors"
-      >
-        <div className="bg-black/50 hover:bg-black/70 rounded-full p-2 md:p-3 flex items-center justify-center">
-          <span className="text-2xl md:text-4xl select-none">›</span>
-        </div>
-      </button>
-
-    </div>
-  </div>
-)}
+      )}
     </section>
   );
 }
