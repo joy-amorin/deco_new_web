@@ -1,6 +1,6 @@
 # DecoProducciones
 
-**DecoProducciones** es una página web para una microempresa dedicada a la creación de stands de comidas y bebidas.  
+**DecoProducciones** es una página web para una microempresa que ofrecede comidas y bebidas para diferentes tipos de eventos, tanto cooprporativos o familiares.  
 El sitio presenta una estructura simple y moderna con secciones informativas sobre la empresa, sus servicios, las marcas con las que trabaja, una galería de imágenes y datos de contacto.
 
 ## 🧩 Tecnologías utilizadas
