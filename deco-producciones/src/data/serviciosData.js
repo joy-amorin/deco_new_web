@@ -66,8 +66,8 @@ export const serviciosData = {
     {
       nombre: "Hamburguesas",
       variantes: [
-        { descripcion: "Simple (lechuga, tomate, aderezos)", precio: "$90" },
-        { descripcion: "Completa (cheddar, jamón, morrón, cebolla y aderezos)", precio: "$140" }
+        { descripcion: "Simple (lechuga, tomate, aderezos)", precio: "$100" },
+        { descripcion: "Completa (cheddar, jamón, morrón, cebolla y aderezos)", precio: "$150" }
       ]
     },
 
@@ -88,13 +88,13 @@ export const serviciosData = {
     {
       nombre: "Panchos",
       variantes: [
-        { descripcion: "Unidad (incluye aderezos y papas pay)", precio: "$65" }
+        { descripcion: "Unidad (incluye aderezos y papas pay)", precio: "$70" }
       ]
     },
     {
       nombre: "Papas Fritas",
       variantes: [
-        { descripcion: "Simples (incluye aderezos)", precio: "$70" },
+        { descripcion: "Simples (incluye aderezos)", precio: "$75" },
         { descripcion: "Con cheddar (incluye aderezos)", precio: "$130" }
       ]
     },
